@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
     /// <summary>
     /// Человек
     /// </summary>
-    class Human
+     class Human
     {
         /// <summary>
         /// Фамилия

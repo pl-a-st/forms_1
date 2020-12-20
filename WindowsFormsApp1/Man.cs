@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
     /// <summary>
     /// Мужчина
     /// </summary>
-    class Man:Human
+     class Man:Human
     {
         /// <summary>
         /// Зарплата
@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         /// <param name="lastName">Фамилия</param>
         /// <param name="middleName">Отчество</param>
         /// <param name="age">Возраст</param>
-        Man(int salary, int height, string name, string lastName, string middleName, int age)
+        public Man(int salary, int height, string name, string lastName, string middleName, int age)
         {
             Salary = salary;
             Height = height;
