@@ -91,7 +91,7 @@
             // AgeLbl
             // 
             this.AgeLbl.AutoSize = true;
-            this.AgeLbl.Location = new System.Drawing.Point(12, 91);
+            this.AgeLbl.Location = new System.Drawing.Point(12, 84);
             this.AgeLbl.Name = "AgeLbl";
             this.AgeLbl.Size = new System.Drawing.Size(49, 13);
             this.AgeLbl.TabIndex = 7;
