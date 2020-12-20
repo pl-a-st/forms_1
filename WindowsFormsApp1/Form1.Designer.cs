@@ -96,6 +96,7 @@
             this.AgeLbl.Size = new System.Drawing.Size(49, 13);
             this.AgeLbl.TabIndex = 7;
             this.AgeLbl.Text = "Возраст";
+            this.AgeLbl.Click += new System.EventHandler(this.AgeLbl_Click);
             // 
             // AgeTB
             // 

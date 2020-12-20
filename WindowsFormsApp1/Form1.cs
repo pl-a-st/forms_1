@@ -26,5 +26,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void AgeLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
