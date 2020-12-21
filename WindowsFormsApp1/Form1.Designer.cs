@@ -37,13 +37,13 @@
             this.AgeLbl = new System.Windows.Forms.Label();
             this.AgeTB = new System.Windows.Forms.TextBox();
             this.inPutGB = new System.Windows.Forms.GroupBox();
-            this.heightOrWeightLbl = new System.Windows.Forms.Label();
-            this.heightOrWeightTB = new System.Windows.Forms.TextBox();
+            this.womanRB = new System.Windows.Forms.RadioButton();
+            this.manRB = new System.Windows.Forms.RadioButton();
             this.hairLengthOrSalaryLbl = new System.Windows.Forms.Label();
             this.hairLengthOrSalaryTB = new System.Windows.Forms.TextBox();
-            this.manRB = new System.Windows.Forms.RadioButton();
-            this.womanRB = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.heightOrWeightLbl = new System.Windows.Forms.Label();
+            this.heightOrWeightTB = new System.Windows.Forms.TextBox();
+            this.humanListCBx = new System.Windows.Forms.ComboBox();
             this.setNewHumanBt = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.inPutGB.SuspendLayout();
@@ -139,21 +139,29 @@
             this.inPutGB.TabStop = false;
             this.inPutGB.Text = "Данные о человеке";
             // 
-            // heightOrWeightLbl
+            // womanRB
             // 
-            this.heightOrWeightLbl.AutoSize = true;
-            this.heightOrWeightLbl.Location = new System.Drawing.Point(6, 175);
-            this.heightOrWeightLbl.Name = "heightOrWeightLbl";
-            this.heightOrWeightLbl.Size = new System.Drawing.Size(68, 13);
-            this.heightOrWeightLbl.TabIndex = 9;
-            this.heightOrWeightLbl.Text = "[параметр1]";
+            this.womanRB.AutoSize = true;
+            this.womanRB.Location = new System.Drawing.Point(9, 42);
+            this.womanRB.Name = "womanRB";
+            this.womanRB.Size = new System.Drawing.Size(75, 17);
+            this.womanRB.TabIndex = 13;
+            this.womanRB.Text = "Женщина";
+            this.womanRB.UseVisualStyleBackColor = true;
+            this.womanRB.CheckedChanged += new System.EventHandler(this.womanRB_CheckedChanged);
             // 
-            // heightOrWeightTB
+            // manRB
             // 
-            this.heightOrWeightTB.Location = new System.Drawing.Point(72, 172);
-            this.heightOrWeightTB.Name = "heightOrWeightTB";
-            this.heightOrWeightTB.Size = new System.Drawing.Size(154, 20);
-            this.heightOrWeightTB.TabIndex = 8;
+            this.manRB.AutoSize = true;
+            this.manRB.Checked = true;
+            this.manRB.Location = new System.Drawing.Point(9, 19);
+            this.manRB.Name = "manRB";
+            this.manRB.Size = new System.Drawing.Size(70, 17);
+            this.manRB.TabIndex = 12;
+            this.manRB.TabStop = true;
+            this.manRB.Text = "Мужчина";
+            this.manRB.UseVisualStyleBackColor = true;
+            this.manRB.CheckedChanged += new System.EventHandler(this.manRB_CheckedChanged);
             // 
             // hairLengthOrSalaryLbl
             // 
@@ -171,37 +179,29 @@
             this.hairLengthOrSalaryTB.Size = new System.Drawing.Size(154, 20);
             this.hairLengthOrSalaryTB.TabIndex = 10;
             // 
-            // manRB
+            // heightOrWeightLbl
             // 
-            this.manRB.AutoSize = true;
-            this.manRB.Checked = true;
-            this.manRB.Location = new System.Drawing.Point(9, 19);
-            this.manRB.Name = "manRB";
-            this.manRB.Size = new System.Drawing.Size(70, 17);
-            this.manRB.TabIndex = 12;
-            this.manRB.TabStop = true;
-            this.manRB.Text = "Мужчина";
-            this.manRB.UseVisualStyleBackColor = true;
-            this.manRB.CheckedChanged += new System.EventHandler(this.manRB_CheckedChanged);
+            this.heightOrWeightLbl.AutoSize = true;
+            this.heightOrWeightLbl.Location = new System.Drawing.Point(6, 175);
+            this.heightOrWeightLbl.Name = "heightOrWeightLbl";
+            this.heightOrWeightLbl.Size = new System.Drawing.Size(68, 13);
+            this.heightOrWeightLbl.TabIndex = 9;
+            this.heightOrWeightLbl.Text = "[параметр1]";
             // 
-            // womanRB
+            // heightOrWeightTB
             // 
-            this.womanRB.AutoSize = true;
-            this.womanRB.Location = new System.Drawing.Point(9, 42);
-            this.womanRB.Name = "womanRB";
-            this.womanRB.Size = new System.Drawing.Size(75, 17);
-            this.womanRB.TabIndex = 13;
-            this.womanRB.Text = "Женщина";
-            this.womanRB.UseVisualStyleBackColor = true;
-            this.womanRB.CheckedChanged += new System.EventHandler(this.womanRB_CheckedChanged);
+            this.heightOrWeightTB.Location = new System.Drawing.Point(72, 172);
+            this.heightOrWeightTB.Name = "heightOrWeightTB";
+            this.heightOrWeightTB.Size = new System.Drawing.Size(154, 20);
+            this.heightOrWeightTB.TabIndex = 8;
             // 
-            // comboBox1
+            // humanListCBx
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(276, 157);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(225, 21);
-            this.comboBox1.TabIndex = 9;
+            this.humanListCBx.FormattingEnabled = true;
+            this.humanListCBx.Location = new System.Drawing.Point(276, 157);
+            this.humanListCBx.Name = "humanListCBx";
+            this.humanListCBx.Size = new System.Drawing.Size(225, 21);
+            this.humanListCBx.TabIndex = 9;
             // 
             // setNewHumanBt
             // 
@@ -229,7 +229,7 @@
             this.ClientSize = new System.Drawing.Size(535, 266);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.setNewHumanBt);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.humanListCBx);
             this.Controls.Add(this.inPutGB);
             this.Name = "myBlackList";
             this.Text = "Черный список";
@@ -258,7 +258,7 @@
         private System.Windows.Forms.TextBox hairLengthOrSalaryTB;
         private System.Windows.Forms.Label heightOrWeightLbl;
         private System.Windows.Forms.TextBox heightOrWeightTB;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox humanListCBx;
         private System.Windows.Forms.Button setNewHumanBt;
         private System.Windows.Forms.Label label1;
     }

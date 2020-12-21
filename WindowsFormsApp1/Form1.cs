@@ -62,9 +62,101 @@ namespace WindowsFormsApp1
 
         private void setNewHumanBt_Click(object sender, EventArgs e)
         {
-            Man man=new Man(Convert.ToInt32(hairLengthOrSalaryTB.Text),
-                Convert.ToInt32(heightOrWeightTB),nameTB.Text,lastNameTB.Text,middleNameTB.Text,
-                Convert.ToInt32(AgeTB.Text));
+            if (manRB.Checked)
+            {
+                setNewMan();
+            }
+            else
+            {
+                if ( womanRB.Checked)
+                {
+                    setNewWoman();
+                }
+            }
+        }
+        private void setNewWoman()
+        {
+            int hairLength, weight, age;
+
+            try
+            {
+                hairLength = Convert.ToInt32(hairLengthOrSalaryTB.Text);
+                weight = Convert.ToInt32(heightOrWeightTB.Text);
+                age = Convert.ToInt32(AgeTB.Text);
+                Woman woman = new Woman(weight,hairLength, nameTB.Text, lastNameTB.Text, middleNameTB.Text, age);
+                humanListCBx.Items.Add(woman.Name + " " + woman.LastName + " " + woman.MiddleName + " рост:" + woman.Weight + " возраст:" + woman.Age + " зарплата:" + woman.HairLength);
+            }
+            catch
+            {
+                try
+                {
+                    hairLength = Convert.ToInt32(hairLengthOrSalaryTB.Text);
+                }
+                catch
+                {
+                    System.Windows.Forms.MessageBox.Show("Введена некорректная зарплата!");
+                }
+                try
+                {
+                    weight = Convert.ToInt32(heightOrWeightTB.Text);
+                }
+                catch
+                {
+                    System.Windows.Forms.MessageBox.Show("Введен некорректный рост!");
+                }
+                try
+                {
+                    age = Convert.ToInt32(AgeTB.Text);
+                }
+                catch
+                {
+                    System.Windows.Forms.MessageBox.Show("Введен некорректный возраст!");
+                }
+
+            }
+
+        }
+        private void setNewMan()
+        {
+            int salary, height, age;
+
+            try
+            {
+                salary = Convert.ToInt32(hairLengthOrSalaryTB.Text);
+                height = Convert.ToInt32(heightOrWeightTB.Text);
+                age = Convert.ToInt32(AgeTB.Text);
+                Man man = new Man(salary, height, nameTB.Text, lastNameTB.Text, middleNameTB.Text, age);
+                humanListCBx.Items.Add(man.Name+" "+man.LastName + " " +man.MiddleName+ " рост:" + man.Height + " возраст:"+man.Age+" зарплата:"+man.Salary);
+            }
+            catch
+            {
+                try
+                {
+                    salary = Convert.ToInt32(hairLengthOrSalaryTB.Text);
+                }
+                catch
+                {
+                    System.Windows.Forms.MessageBox.Show("Введена некорректная зарплата!");
+                }
+                try
+                {
+                    height = Convert.ToInt32(heightOrWeightTB.Text);
+                }
+                catch
+                {
+                    System.Windows.Forms.MessageBox.Show("Введен некорректный рост!");
+                }
+                try
+                {
+                    age = Convert.ToInt32(AgeTB.Text);
+                }
+                catch
+                {
+                    System.Windows.Forms.MessageBox.Show("Введен некорректный возраст!");
+                }
+
+            }
+           
         }
     }
 }

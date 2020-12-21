@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         /// <param name="lastName">Фамилия</param>
         /// <param name="middleName">Отчество</param>
         /// <param name="age">Возраст</param>
-        Woman(int weight, int hairLength, string name, string lastName, string middleName, int age)
+        public Woman(int weight, int hairLength, string name, string lastName, string middleName, int age)
         {
             Weight = weight;
             HairLength = hairLength;
